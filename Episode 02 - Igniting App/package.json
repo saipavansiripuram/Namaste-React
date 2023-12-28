@@ -1,0 +1,28 @@
+{
+  "name": "episode-02---igniting-app",
+  "version": "1.0.0",
+  "description": "React Practice Project",
+  
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saipavansiripuram/Namaste-React.git"
+  },
+  "keywords": [],
+  "author": "Sai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saipavansiripuram/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/saipavansiripuram/Namaste-React#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  },
+  "browserslist":[
+    "last 2 versions"
+  ]
+  
+}
+  
