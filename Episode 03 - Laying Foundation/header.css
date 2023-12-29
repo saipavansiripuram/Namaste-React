@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: #333;
+    width: auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#search{
+    padding: 10px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 17px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.logo{
+   width: 60px;
+   height: 60px;
+   padding: 10px 0;
+}
+
+.avtar{
+    width: 60px;
+    /* height: auto;   */
+    height: 60px;
+}

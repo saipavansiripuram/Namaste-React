@@ -1,13 +1,11 @@
 {
-  "name": "episode-02---igniting-app",
+  "name": "episode-03---igniting-app",
   "version": "1.0.0",
   "description": "React Practice Project",
-  
   "scripts": {
-    "start" : "parcel index.html",
-    "build " : "parcel build index.html",
+    "start": "parcel index.html",
+    "build ": "parcel build index.html",
     "test": "jest"
-
   },
   "repository": {
     "type": "git",
@@ -21,11 +19,14 @@
   },
   "homepage": "https://github.com/saipavansiripuram/Namaste-React#readme",
   "devDependencies": {
-    "parcel": "^2.10.3"
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
   },
-  "browserslist":[
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
     "last 2 versions"
   ]
-  
 }
-  
