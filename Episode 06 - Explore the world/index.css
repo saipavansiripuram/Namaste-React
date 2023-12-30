@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+
+h1{
+  color: #000;
+  margin: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app {
+  display: block;
+  
+  /* margin: 0 auto; */
+}
+
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content : space-between; 
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background-color: hsla(0, 6%, 49%, 0.502);
+    border: 1px solid #000;
+    border-radius: 1rem;
+}
+.logo{
+    width: 150px;
+}
+.avtar{
+    width: 90px;
+    margin-right:2rem ;
+}
+
+.nav-items > ul{
+  display: flex;
+  list-style-type: none;
+  font-size: 2rem;
+
+   
+}
+.nav-items >ul > li{
+    cursor: pointer;
+    padding: 10px;
+    margin: 20px;
+}
+  
+
+
+.filter{
+    margin: 2rem auto; 
+   
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+        gap: 10px;
+      
+      
+}
+
+.filter input {
+    min-width: 250px;
+    padding: 10px;
+    border-radius: 3rem;
+  }
+  
+  .filter input:focus {
+    outline: 0;
+  }
+  
+  .filter button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3rem;
+  }
+
+.res-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 40px;
+
+}
+.res-card{
+
+    width: 300px;
+    /* height: 580px; */
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 10px ;
+    background-color: aliceblue  ;
+    /* font-size: larger; */
+}
+
+.res-card:hover{
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    border: 1px solid #000; 
+}
+.res-logo{
+    width: 100%;
+    border-radius: 5px;
+ 
+}
+
+
+.footer {
+    padding: 20px 10px;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    background-color: hsla(0, 6%, 49%, 0.502);
+    margin-top: 50px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+.shimmer-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 2px 40px;
+ 
+}
+  .shimmer-card{
+    margin-top: 2rem;
+    width: 300px;
+    height: 400px;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 10px ;
+    background-color: aliceblue  ;
+  
+  }
+
+  .login{
+    padding: 0px 35px;
+    cursor: pointer;
+    border-radius: 1rem;
+    margin-right: 1rem;
+  }
