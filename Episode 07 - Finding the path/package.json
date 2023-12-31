@@ -1,0 +1,33 @@
+{
+  "name": "episode-07--Finding the path",
+  "version": "1.0.0",
+  "description": "React Practice Project",
+  "scripts": {
+    "start": "parcel index.html",
+    "build ": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saipavansiripuram/Namaste-React.git"
+  },
+  "keywords": [],
+  "author": "Sai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saipavansiripuram/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/saipavansiripuram/Namaste-React#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
