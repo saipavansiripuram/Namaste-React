@@ -202,6 +202,9 @@ h1{
     align-items: center;
     gap: 30px;
   }
+  .name-of-res{
+    color: #fff;
+  }
   
   .menu-header .menu-header-left img {
     width: 250px;
@@ -236,7 +239,7 @@ h1{
   
   .menu-main {
     /* margin-top: 100px; */
-    margin: 80px 150px;
+    /* margin: 80px 150px; */
   }
   
   .menu-main h2 {

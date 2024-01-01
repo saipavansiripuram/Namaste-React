@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { MENU_API } from "../utils/constants";
 import { useParams } from "react-router-dom";
+import { FiClock } from 'react-icons/fi';
+import { AiOutlineStar } from 'react-icons/ai';
+import { FiClock } from 'react-icons/fi';
+import { AiOutlineStar } from 'react-icons/ai';
+import { CDN_URL } from '../utils/constants';
 
 const RestaurantMenu =()=>{
     const [resInfo ,setResInfo] = useState(null);
@@ -24,28 +29,90 @@ const RestaurantMenu =()=>{
 
     if(resInfo === null) return <Shimmer/> ;
 
-    const {name ,cuisines,avgRating,costForTwoMessage} = resInfo?.cards[0]?.card?.card?.info?? {};
+    const { name,
+        cuisines,
+        costForTwoMessage,
+        costForTwo,
+        cloudinaryImageId,
+        avgRating,
+        deliveryTime,} = resInfo?.cards[0]?.card?.card?.info?? {};
 
     const { itemCards}=resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card ??  {};
 
 
     return (
         <div className="menu">
-            <h1>{name}</h1>
-            <h2>{cuisines.join(", ")}</h2>
-            <p>Rating : {avgRating}  Cost : {costForTwoMessage}</p>
-            <h3></h3>
-            <ul >
-               {itemCards.map((item)=>(
-                <li key={item.card.info.id}>{item.card.info.name} - Price Rs.{item.card.info.price /100 ||item.card.info.defaultPrice /100 }</li>
-               ))}
-                {/* <li>{itemCards[0].card.info.name}</li> */}
-                {/* <li>Cold</li>
-                <li>Burger </li>
-                <li>Pizza</li>
-                <li>Diet Coke</li> */}
-            </ul>
+        <header className="menu-header">
+          <div className="menu-header-left">
+            <img src={CDN_URL + cloudinaryImageId} alt="Restaurent Info" />
+          </div>
+          <div className="menu-header-right">
+            <div className="top">
+              <h1 className="name-of-res">{name}</h1>
+              <h3>{cuisines.join(', ')}</h3>
+            </div>
+            <div className="bottom">
+              <h4 className="avg-rating">
+                <span
+                  className="icons"
+                  style={{
+                    position: 'relative',
+                    top: '2px',
+                    marginRight: '3px',
+                  }}
+                >
+                  <AiOutlineStar />
+                </span>
+                <span>{avgRating}</span>
+              </h4>
+              <h4 className="time">
+                <span
+                  className="icons"
+                  style={{
+                    position: 'relative',
+                    top: '2px',
+                    marginRight: '3px',
+                  }}
+                >
+                  <FiClock />
+                </span>
+                <span> {deliveryTime} MINS</span>
+              </h4>
+              <h3>{costForTwoMessage}</h3>
+            </div>
+          </div>
+        </header>
+  
+        <div className="menu-main">
+          <h2>Menu</h2>
+          <h3 className="items">{itemCards.length} items</h3>
+          <div className="menu-main-card-container">
+            {itemCards.map((item) => (
+              <div key={item.card.info.id} className="menu-card">
+                <div className="menu-card-left">
+                  <h2 className="menu-name">{item.card.info.name}</h2>
+                  <h3 className="menu-price">
+                    ₹
+                    {item.card.info.price / 100 ||
+                      item.card.info.defaultPrice / 100}
+                  </h3>
+                  <h4 className="menu-description">
+                    {item.card.info.description}
+                  </h4>
+                </div>
+                <div className="menu-card-right">
+                  <img src={CDN_URL + item.card.info.imageId} alt="Menu Info" />
+                </div>
+              </div>
+            ))}
+  
+            {/* <li>{itemCards[0].card.info.name}</li>
+          <li>{itemCards[1].card.info.name}</li>
+          <li>{itemCards[2].card.info.name}</li> */}
+          </div>
         </div>
+      </div>
+  
     )
 };
 
