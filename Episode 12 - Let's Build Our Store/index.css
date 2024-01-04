@@ -1,0 +1,388 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* 
+*,
+*::before,
+*::after {
+
+  box-sizing: border-box;
+}
+
+h1{
+  color: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app {
+  display: block;
+  
+
+}
+
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content : space-between; 
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background-color: hsla(0, 6%, 49%, 0.502);
+    border: 1px solid #000;
+    border-radius: 1rem;
+    color: #000;
+}
+.logo{
+    width: 150px;
+}
+.avtar{
+    width: 90px;
+    margin-right:2rem ;
+}
+
+.nav-items > ul{
+  display: flex;
+  list-style-type: none;
+  font-size: 2rem;
+  
+}
+.nav-items >ul > li{
+  cursor: pointer;
+  padding: 10px;
+  margin: 20px;
+  color: #000;
+  text-decoration: none !important;
+  font-style: none;
+}
+
+.nav-items > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+.nav-items > ul > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(0, 0%, 0%);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-items > ul > li > a:hover {
+  color: hsl(19, 100%, 50%);
+}
+
+.nav-items > ul > li > a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+
+
+
+.filter{
+    margin: 2rem auto; 
+   
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+        gap: 10px;
+      
+      
+}
+
+.filter input {
+    min-width: 250px;
+    padding: 10px;
+    border-radius: 3rem;
+  }
+  
+  .filter input:focus {
+    outline: 0;
+  }
+  
+  .filter button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3rem;
+  }
+
+.res-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 40px;
+
+}
+.res-card{
+
+    
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    transition: transform 0.2s; 
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.res-card:hover{
+    
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+.res-logo{
+    width: 100%;
+   
+    
+    height: 250px;
+    object-fit: fill;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.res-card Link {
+  text-decoration: none;
+}
+.res-card h4 {
+  margin: 0;
+  text-decoration: none;
+
+}
+
+
+.res-card h3 {
+  font-size: 20px;
+  margin-top: 10px;
+
+}
+
+.res-card h4, h5 {
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 5px;
+
+}
+
+.res-card h5 {  
+  color: #777;
+}
+
+.footer {
+    padding: 20px 10px;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    background-color: hsla(0, 6%, 49%, 0.502);
+    margin-top: 50px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+.shimmer-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 2px 40px;
+ 
+}
+  .shimmer-card{
+    margin-top: 2rem;
+    width: 300px;
+    height: 400px;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 10px ;
+    background-color: aliceblue  ;
+  
+  }
+
+  .login{
+    padding: 0px 35px;
+    cursor: pointer;
+    border-radius: 1rem;
+    margin-right: 1rem;
+  }
+
+  .menu-header {
+    height: 30vh;
+    background-color: hsl(0, 6%, 33%);
+    backdrop-filter: blur(10rem);
+    color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+    margin-top:2rem ;
+  }
+  .name-of-res{
+    color: #fff;
+  }
+  
+
+  .menu-header .menu-header-left img {
+    width: 250px;
+    height: 170px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .menu-header .menu-header-right .top h1 {
+    font-size: 40px;
+    font-weight: normal;
+  }
+  
+  .menu-header .menu-header-right .top h3 {
+    font-weight: normal;
+    opacity: 0.7;
+    margin-top: 5px;
+  }
+  
+  .menu-header .menu-header-right .bottom {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .menu-header .menu-header-right .bottom h4 {
+    border-right: 4px solid #ccc;
+    padding-right: 20px;
+  }
+  
+ 
+  
+  .menu-main h2 {
+    font-size: 30px;
+    opacity: 0.8;
+  }
+  
+  .menu-main .items {
+    font-size: 14px;
+    opacity: 0.6;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  
+  .menu-main-card-container {
+    margin-top: 50px;
+    border-radius: 7px;
+  }
+  
+  .menu-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #3b3a3a;
+    border-radius: 2px;
+  }
+  
+  .menu-card-left .menu-name {
+    font-size: 24px;
+    opacity: 0.8;
+  }
+  
+  .menu-card-left .menu-price {
+    font-weight: normal;
+    opacity: 0.8;
+    margin-top: 5px;
+  }
+  
+  .menu-card-left .menu-description {
+    font-weight: normal;
+    opacity: 0.8;
+    margin-top: 15px;
+  }
+  
+  .menu-card-right img {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+
+  .user-card{
+    border: 1px solid hsl(0, 0%, 0%);
+    border-radius: 2rem;
+    backdrop-filter: blur(6rem);
+    background-color:darkgrey;
+  
+    padding: 10px;
+    margin: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
+
+  .avtar-2{
+    margin-right: 2rem;
+    width: 200px;
+    border-radius: 12rem;
+    outline: none;
+  }
+
+  .avtar-2:hover{
+    outline: 3px solid #fff;
+  }
+
+  .user-card:hover {
+    outline: 2px solid #432c2c; 
+   
+  }
+
+
+  .nav-items > ul > li > a {
+    position: relative; 
+  }
+  
+  .nav-items > ul > li > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -1rem;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-items > ul > li > a:hover {
+    color: hsl(19, 100%, 50%);
+  }
+  
+  .nav-items > ul > li > a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+   */
