@@ -26,10 +26,8 @@ describe("Contact Us Page Case", () => {
     // we can write name as it  
   it("Should load contact us component", () => {
     render(<Contact />);
-
     // Different roles , which are defined by jest
     const heading = screen.getByRole("heading"); // rendered will be accessed by the screen
-
     // Assertion
     expect(heading).toBeInTheDocument();
   });
@@ -37,7 +35,6 @@ describe("Contact Us Page Case", () => {
   test("Should load submit text inside contact component", () => {
     render(<Contact />);
     const button = screen.getByText("Submit");
-
     // Assertion
     expect(button).toBeInTheDocument();
   });

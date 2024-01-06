@@ -21,7 +21,6 @@ import "@testing-library/jest-dom"
 //     );
 
 // })
-
 it("Should render header component with a login button",()=>{
     render(
         <BrowserRouter>    
