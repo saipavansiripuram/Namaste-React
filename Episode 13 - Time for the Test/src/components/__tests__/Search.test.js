@@ -54,6 +54,7 @@ it("Should Filter Top Rated Restaurants", async () => {
 
   expect(cardsBeforeFilter.length).toBe(20);
 
+  
   const topRatedBtn = screen.getByRole("button",{name:"Top Rated Restaurants"});
 
   fireEvent.click(topRatedBtn);
